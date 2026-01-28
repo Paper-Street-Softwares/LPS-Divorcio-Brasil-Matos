@@ -257,3 +257,5 @@ function HeroTemplateNovo({
 }
 
 export default HeroTemplateNovo
+
+//ajustes
