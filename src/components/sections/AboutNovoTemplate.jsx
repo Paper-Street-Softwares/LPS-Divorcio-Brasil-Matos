@@ -187,7 +187,7 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
                 </div>
               </motion.div>
 
-              <div className="flex flex-col gap-4 w-fit justify-center items-start desktop1:hidden">
+              <div className="flex flex-col gap-4 w-fit justify-center mx-auto desktop1:hidden">
                 <ButtonReflexo
                   icon={
                     <svg

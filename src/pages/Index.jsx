@@ -53,38 +53,42 @@ export default function Index() {
           <HeroTemplateNovo colorMode={colorMode} obs={true} obsTwo={true} />
           {/* Lazy sections */}
           <Suspense fallback={null}>
-            {/* <Important colorMode={colorMode} /> */}
             <FeaturesNovaTemplate
               colorMode={colorMode}
               frasesDestaque={false}
               accordion={true}
             />
             <Speed colorMode={colorMode} />
-            {/* <Cards colorMode={colorMode} /> */}
-            {/* <InventarioComparativo colorMode={colorMode} /> */}
-            {/* <FeaturesSemImage colorMode={colorMode} /> */}
+
             <AboutNovoTemplate
               colorMode={colorMode}
               ButtonModal={false}
               benefits={false}
             />
-            {/* <TeamSectionNew colorMode={colorMode} /> */}
-            {/* <SocialMediaTemplate colorMode={colorMode} /> */}
+
             <CtaNovoTemplate colorMode={colorMode} />
-            {/* <StepsNovoTemplate colorMode={colorMode} /> */}
+
             <FaqNovoTemplate colorMode={colorMode} />
+            <Cards colorMode={colorMode} />
             <FooterNovoTemplate
               colorMode={colorMode}
               mapa={false}
               phoneSecond={false}
               expediente={false}
               adress={true}
-              email={true}
+              email={false}
               emailSecond={false}
               fraseFooter={true} // frase Google LLC
               obs={false}
             />
             <WhatsappAnimated colorMode={colorMode} />
+            {/* <TeamSectionNew colorMode={colorMode} /> */}
+            {/* <SocialMediaTemplate colorMode={colorMode} /> */}
+            {/* <StepsNovoTemplate colorMode={colorMode} /> */}
+
+            {/* <InventarioComparativo colorMode={colorMode} /> */}
+            {/* <FeaturesSemImage colorMode={colorMode} /> */}
+            {/* <Important colorMode={colorMode} /> */}
           </Suspense>
         </main>
       </ColorModeProvider>

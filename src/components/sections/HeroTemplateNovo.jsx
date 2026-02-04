@@ -117,7 +117,7 @@ function HeroTemplateNovo({
               >
                 {content.texts.hero.subtitle}
               </p>
-              <div className="flex flex-col gap-4 pt-4">
+              <div className="flex flex-col gap-4 pt-4 mx-auto desktop1:mx-0">
                 <ButtonReflexo
                   icon={
                     <svg
@@ -257,4 +257,3 @@ function HeroTemplateNovo({
 }
 
 export default HeroTemplateNovo
-

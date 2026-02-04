@@ -2,7 +2,6 @@ import logo from '../assets/imgs/logo/logo.webp'
 import heroDefaultImg from '../assets/imgs/hero/lawHero.webp'
 import heroDefaultMobileImage from '../assets/imgs/hero/lawHeroMobile.webp'
 import imgFeatures from '../assets/imgs/features/imgServices.webp'
-
 import aboutImg from '../assets/imgs/about/aboutImg.webp'
 // import team1 from '../assets/imgs/team/team1.webp'
 // import team2 from '../assets/imgs/team/team2.webp'
@@ -12,8 +11,9 @@ import imgSteps from '../assets/imgs/steps/imgSteps.webp'
 
 import {
   Baby,
-  Briefcase,
+  BriefcaseBusiness,
   BriefcaseMedical,
+  ShoppingCart,
   Gavel,
   Home,
   Key,
@@ -26,6 +26,8 @@ import {
 } from 'lucide-react'
 import { Users } from 'lucide-react'
 import { FileText } from 'lucide-react'
+import { User } from 'lucide-react'
+import { Building } from 'lucide-react'
 
 const currentYear = new Date().getFullYear()
 
@@ -289,7 +291,7 @@ const content = {
         card5: {
           title: 'Divórcio com partilha de bens',
           subtitle:
-            'A_DeAnálise e divisão justa dos bens, garantindo segurança em cada etapa do processo.finir',
+            'Análise e divisão justa dos bens, garantindo segurança em cada etapa do processo.',
           description: (
             <div>
               A_Definir
@@ -586,6 +588,32 @@ const content = {
         },
       },
       paragraph: 'Clique aqui caso tenha mais dúvidas',
+    },
+    cardsSection: {
+      miniTag: 'Áreas de Atuação',
+      title: 'Atuação jurídica completa para proteger seus direitos',
+      subtitle:
+        'Soluções legais pensadas para prevenir conflitos, resolver problemas e garantir segurança jurídica em diferentes áreas do Direito.',
+      cards: {
+        card1: {
+          title: 'Direito Civil',
+          icon: <User />,
+        },
+        card2: {
+          title: 'Direito do Consumidor',
+          icon: <ShoppingCart />,
+        },
+        card3: {
+          title: 'Direito Imobiliário',
+          icon: <Building />,
+        },
+        card4: {
+          title: 'Direito Trabalhista',
+          icon: <BriefcaseBusiness />,
+        },
+      },
+      ctaButtonText: 'Clique aqui e conheça nosso escritório',
+      linkCtaButton: 'https://previa-principal.brasilmatos.com.br/',
     },
     // team: {
     //   miniTag: 'A_Definir',

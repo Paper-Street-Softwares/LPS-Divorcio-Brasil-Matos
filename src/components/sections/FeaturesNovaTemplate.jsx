@@ -123,7 +123,7 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                     </div>
                   )}
                 </motion.div>
-                <div className="flex flex-col gap-4 pt-4 w-fit justify-center items-start desktop1:m-auto">
+                <div className="flex flex-col gap-4 pt-4 w-fit justify-center mx-auto">
                   <ButtonReflexo
                     icon={
                       <svg

@@ -1,4 +1,5 @@
 import React from 'react'
+import MotionDivDownToUp from '../animation/MotionDivDownToUp'
 
 function SectionHeaderNovo({
   miniTitle,
@@ -55,33 +56,35 @@ function SectionHeaderNovo({
   if (type === 'article') {
     usage = 'text-start mb-8'
   } else {
-    usage = 'text-center mb-16'
+    usage = 'text-center mb-10'
   }
 
   return (
-    <div className={`max-w-2xl mx-auto ${className} ${usage}`}>
-      {miniTitle && (
-        <span
-          className={`font-bold font-secondFont tracking-wider uppercase text-xs mb-2 block ${miniTag}`}
-        >
-          {miniTitle}
-        </span>
-      )}
+    <MotionDivDownToUp>
+      <div className={`max-w-2xl mx-auto ${className} ${usage}`}>
+        {miniTitle && (
+          <span
+            className={`font-bold font-secondFont tracking-wider uppercase text-xs mb-2 block ${miniTag}`}
+          >
+            {miniTitle}
+          </span>
+        )}
 
-      {title && (
-        <h2
-          className={`text-3xl md:text-4xl font-mainFont font-medium mb-4 ${text}`}
-        >
-          {title}
-        </h2>
-      )}
+        {title && (
+          <h2
+            className={`text-3xl md:text-4xl font-mainFont font-medium mb-4 ${text}`}
+          >
+            {title}
+          </h2>
+        )}
 
-      {subtitle && (
-        <p className={`font-secondFont font-light ${textOpacity}`}>
-          {subtitle}
-        </p>
-      )}
-    </div>
+        {subtitle && (
+          <p className={`font-secondFont font-light ${textOpacity}`}>
+            {subtitle}
+          </p>
+        )}
+      </div>
+    </MotionDivDownToUp>
   )
 }
 

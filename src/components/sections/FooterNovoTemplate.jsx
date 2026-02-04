@@ -10,6 +10,7 @@ import content from '../../content/content'
 function FooterNovoTemplate({
   mapa,
   colorMode,
+  phone,
   phoneSecond,
   expediente,
   adress,
@@ -36,7 +37,7 @@ function FooterNovoTemplate({
       text = 'text-corTitulosPreto'
       textOpacity = 'text-corOutrosTextosPreto'
       iconColor = 'text-primaryDark/60'
-      backgroundMode = 'bg-terciary/60'
+      backgroundMode = 'bg-white'
       break
     case 'dark':
       text = 'text-corTitulosBranca'
@@ -64,7 +65,7 @@ function FooterNovoTemplate({
                 <img
                   src={content.texts.navbar.logo.img}
                   alt={content.texts.navbar.logo.alt}
-                  className="w-[50%]"
+                  className="w-[70%]"
                   width={187}
                   height={119}
                 />
@@ -113,24 +114,36 @@ function FooterNovoTemplate({
                     Links Rápidos
                   </h1>
                   <ul className="space-y-4 font-secondFont font-light">
-                    {labels.map((item, index) => (
-                      <li key={item}>
-                        <Link
-                          to={ids[index]}
-                          aria-label={`Link para ${item}`}
-                          smooth={true}
-                          duration={500}
-                          offset={-90}
-                          spy={true}
-                          hashSpy={true}
-                          tag="a"
-                          href={`#${ids[index]}`}
-                          className="cursor-pointer bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px]"
-                        >
-                          {item}
-                        </Link>
-                      </li>
-                    ))}
+                    {labels.map((item, index) => {
+                      const id = ids[index]
+
+                      return (
+                        <li key={id}>
+                          <a
+                            href={`#${id}`}
+                            aria-label={`Link para ${item}`}
+                            title={item}
+                            data-track={id}
+                            className="cursor-pointer bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px]"
+                            onClick={(e) => {
+                              e.preventDefault()
+                              const el = document.getElementById(id)
+                              if (el) {
+                                const yOffset = -90
+                                const y =
+                                  el.getBoundingClientRect().top +
+                                  window.scrollY +
+                                  yOffset
+
+                                window.scrollTo({ top: y, behavior: 'smooth' })
+                              }
+                            }}
+                          >
+                            {item}
+                          </a>
+                        </li>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>
@@ -152,12 +165,14 @@ function FooterNovoTemplate({
                         </span>
                       </li>
                     )}
-                    <li className="flex items-center gap-3">
-                      <Phone className={`w-5 h-5 shrink-0 ${iconColor}`} />
-                      <span className="font-secondFont font-light">
-                        {content.texts.infos.phone}
-                      </span>
-                    </li>
+                    {phone && (
+                      <li className="flex items-center gap-3">
+                        <Phone className={`w-5 h-5 shrink-0 ${iconColor}`} />
+                        <span className="font-secondFont font-light">
+                          {content.texts.infos.phone}
+                        </span>
+                      </li>
+                    )}
                     {phoneSecond && (
                       <li className="flex items-center gap-3">
                         <Phone className={`w-5 h-5 shrink-0 ${iconColor}`} />
