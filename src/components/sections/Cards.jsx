@@ -71,10 +71,10 @@ function Cards({ colorMode }) {
             <div className="flex flex-col gap-12 items-center">
               <div className="flex flex-wrap gap-6 justify-center">
                 {cards.map((item, index) => (
-                  <MotionDivDownToUp>
+                  <MotionDivDownToUp className="w-full phone3:w-auto">
                     <div
                       key={index}
-                      className={`h-fit border-t-4 ${borderT} bg-white transition-shadow duration-300 max-w-[160px] rounded-md`}
+                      className={`h-fit border-t-4 ${borderT} bg-white transition-shadow duration-300 w-[80%] phone3:w-[200px] mx-auto rounded-md`}
                     >
                       <div className="pt-8 px-6 pb-8 h-full flex flex-col">
                         <div className="w-14 h-14 rounded-full bg-primaryDark text-white flex items-center justify-center mx-auto text-primary mb-6">
