@@ -36,7 +36,10 @@ function Speed({ colorMode }) {
             title="Dependendo do caso, o divórcio pode ser resolvido:"
             colorMode={colorMode}
           />
-          <div className="max-w-4xl mx-auto bg-secondary/50 rounded-3xl p-8 md:p-12 border">
+          <div className="w-full mx-auto bg-white rounded-xl p-8 md:p-12 border relative overflow-hidden">
+            <div
+              className={`absolute top-0 left-0 bg-primaryDark h-2 w-full`}
+            />
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -53,8 +56,8 @@ function Speed({ colorMode }) {
                   key={idx}
                   className="flex flex-col items-center text-center space-y-4"
                 >
-                  <div className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center">
-                    <item.icon className={`w-6 h-6 ${textOpacity}`} />
+                  <div className="w-12 h-12 rounded-full bg-primaryDark flex items-center justify-center">
+                    <item.icon className={`w-6 h-6 text-white`} />
                   </div>
                   <p className={`font-medium font-secondFont ${textOpacity}`}>
                     {item.text}

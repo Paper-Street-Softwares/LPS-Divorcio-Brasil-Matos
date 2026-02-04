@@ -19,7 +19,7 @@ function Cards({ colorMode }) {
 
   switch (colorMode) {
     case 'light':
-      backgroundMode = 'bg-secondary/60'
+      backgroundMode = 'bg-terciary/60'
       text = 'text-corTitulosPreto'
       textOpacity = 'text-corOutrosTextosPreto'
       stepNumberBg = 'bg-white'
@@ -77,7 +77,7 @@ function Cards({ colorMode }) {
                       className={`h-fit border-t-4 ${borderT} bg-white transition-shadow duration-300 max-w-[160px] rounded-md`}
                     >
                       <div className="pt-8 px-6 pb-8 h-full flex flex-col">
-                        <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mx-auto text-primary mb-6">
+                        <div className="w-14 h-14 rounded-full bg-primaryDark text-white flex items-center justify-center mx-auto text-primary mb-6">
                           {item.icon}
                         </div>
                         <h3 className="text-xl font-secondFont font-bold text-primary text-center">
