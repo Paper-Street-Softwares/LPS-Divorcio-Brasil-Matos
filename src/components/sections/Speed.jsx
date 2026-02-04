@@ -3,6 +3,7 @@ import SectionArea from '../sectionElements/SectionArea'
 import SectionWrapper from '../sectionElements/SectionWrapper'
 import { Clock, Gavel, ShieldCheck } from 'lucide-react'
 import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
+import MotionDivDownToUp from '../animation/MotionDivDownToUp'
 
 function Speed({ colorMode }) {
   let backgroundMode, text, textOpacity, textDestaque, cardBg, iconBg
@@ -52,17 +53,19 @@ function Speed({ colorMode }) {
                   icon: ShieldCheck,
                 },
               ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center text-center space-y-4"
-                >
-                  <div className="w-12 h-12 rounded-full bg-primaryDark flex items-center justify-center">
-                    <item.icon className={`w-6 h-6 text-white`} />
+                <MotionDivDownToUp>
+                  <div
+                    key={idx}
+                    className="flex flex-col items-center text-center space-y-4"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-primaryDark flex items-center justify-center">
+                      <item.icon className={`w-6 h-6 text-white`} />
+                    </div>
+                    <p className={`font-medium font-secondFont ${textOpacity}`}>
+                      {item.text}
+                    </p>
                   </div>
-                  <p className={`font-medium font-secondFont ${textOpacity}`}>
-                    {item.text}
-                  </p>
-                </div>
+                </MotionDivDownToUp>
               ))}
             </div>
 

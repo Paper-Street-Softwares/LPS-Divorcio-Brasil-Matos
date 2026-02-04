@@ -13,6 +13,7 @@ import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import MotionDivDownToUp from '../animation/MotionDivDownToUp'
 
 const features = Object.values(content.texts.features.cards)
 
@@ -93,12 +94,7 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
               {/* Imagem com destaque */}
               <div>
                 {' '}
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, ease: 'easeOut' }}
-                  className="relative order-2 lg:order-1 w-full m-auto"
-                >
+                <MotionDivDownToUp className="relative order-2 lg:order-1 w-full m-auto">
                   <div
                     className={`relative overflow-hidden rounded-3xl shadow-2xl  ${image}`}
                   >
@@ -122,7 +118,7 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                       </p>
                     </div>
                   )}
-                </motion.div>
+                </MotionDivDownToUp>
                 <div className="flex flex-col gap-4 pt-4 w-fit justify-center mx-auto">
                   <ButtonReflexo
                     icon={
@@ -154,12 +150,7 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
               </div>
 
               {/* Conteúdo das features */}
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-                className="order-1 lg:order-2 space-y-8 w-[90%] desktop1:w-[50%]"
-              >
+              <MotionDivDownToUp className="order-1 lg:order-2 space-y-8 w-full desktop1:w-[50%]">
                 <SectionHeaderNovo
                   miniTitle={content.texts.features.miniTag}
                   title={content.texts.features.title}
@@ -171,45 +162,50 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                   <div className="w-full">
                     <div>
                       {features.map((item, index) => (
-                        <Accordion
-                          key={index}
-                          expanded={expanded === index}
-                          onChange={() =>
-                            setExpanded(expanded === index ? false : index)
-                          }
-                        >
-                          <AccordionSummary
-                            expandIcon={
-                              <ExpandMoreIcon className={`${textDestaque}`} />
+                        <MotionDivDownToUp className={`w-full`}>
+                          <Accordion
+                            key={index}
+                            expanded={expanded === index}
+                            onChange={() =>
+                              setExpanded(expanded === index ? false : index)
                             }
-                            aria-controls={`panel-${index}-content`}
-                            id={`panel-${index}-header`}
-                            sx={{
-                              backgroundColor: bgAccordion,
-                            }}
                           >
-                            <Typography component="span" className={`${text}`}>
-                              {item.title}
-                            </Typography>
-                          </AccordionSummary>
+                            <AccordionSummary
+                              expandIcon={
+                                <ExpandMoreIcon className={`${textDestaque}`} />
+                              }
+                              aria-controls={`panel-${index}-content`}
+                              id={`panel-${index}-header`}
+                              sx={{
+                                backgroundColor: bgAccordion,
+                              }}
+                            >
+                              <Typography
+                                component="span"
+                                className={`${text}`}
+                              >
+                                {item.title}
+                              </Typography>
+                            </AccordionSummary>
 
-                          <AccordionDetails
-                            sx={{
-                              backgroundColor: bgAccordion,
-                            }}
-                          >
-                            <Typography className={`${textOpacity}`}>
-                              {item.subtitle}
-                            </Typography>
-                          </AccordionDetails>
-                        </Accordion>
+                            <AccordionDetails
+                              sx={{
+                                backgroundColor: bgAccordion,
+                              }}
+                            >
+                              <Typography className={`${textOpacity}`}>
+                                {item.subtitle}
+                              </Typography>
+                            </AccordionDetails>
+                          </Accordion>
+                        </MotionDivDownToUp>
                       ))}
                     </div>
                   </div>
                 ) : (
                   <div className="grid tablet1:grid-cols-2 gap-6">
                     {features.slice(0, 4).map((feature, idx) => (
-                      <motion.div
+                      <MotionDivDownToUp
                         key={idx}
                         className={`group p-6 rounded-xl ${cardBg} ${hoverCardBg} transition-all duration-700 cursor-pointer`}
                       >
@@ -228,11 +224,11 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                         >
                           {feature.subtitle}
                         </p>
-                      </motion.div>
+                      </MotionDivDownToUp>
                     ))}
                   </div>
                 )}
-              </motion.div>
+              </MotionDivDownToUp>
             </div>
           </div>
         </section>

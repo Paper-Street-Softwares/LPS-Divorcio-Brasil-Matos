@@ -9,6 +9,7 @@ import {
 } from '../interactives/FaqNovo'
 import content from '../../content/content'
 import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
+import MotionDivDownToUp from '../animation/MotionDivDownToUp'
 
 function FaqNovoTemplate({ colorMode }) {
   const faqs = Object.values(content.texts.faq.questions)
@@ -40,7 +41,7 @@ function FaqNovoTemplate({ colorMode }) {
     <SectionArea className={`${backgroundMode}`} id="faq">
       <SectionWrapper>
         <section className={` w-full`}>
-          <div className="container mx-auto max-w-3xl">
+          <div className="mx-auto max-w-3xl">
             {/* Header */}
             <SectionHeaderNovo
               miniTitle={content.texts.faq.miniTag}
@@ -49,32 +50,34 @@ function FaqNovoTemplate({ colorMode }) {
               colorMode={colorMode}
             />
             {/* Accordion */}
-            <Accordion
-              type="single"
-              collapsible
-              className="w-full"
-              defaultValue="item-0"
-            >
-              {faqs.map((faq, idx) => (
-                <AccordionItem
-                  key={idx}
-                  value={`item-${idx}`}
-                  className="border-b border-border"
-                >
-                  <AccordionTrigger
-                    colorMode={colorMode}
-                    className={`text-lg font-medium font-secondFont text-left py-6 ${text}`}
+            <MotionDivDownToUp>
+              <Accordion
+                type="single"
+                collapsible
+                className="w-full"
+                defaultValue="item-0"
+              >
+                {faqs.map((faq, idx) => (
+                  <AccordionItem
+                    key={idx}
+                    value={`item-${idx}`}
+                    className="border-b border-border"
                   >
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent
-                    className={`font-secondFont font-light pb-6 leading-relaxed ${textOpacity}`}
-                  >
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+                    <AccordionTrigger
+                      colorMode={colorMode}
+                      className={`text-lg font-medium font-secondFont text-left py-6 ${text}`}
+                    >
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent
+                      className={`font-secondFont font-light pb-6 leading-relaxed ${textOpacity}`}
+                    >
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </MotionDivDownToUp>
           </div>
         </section>
       </SectionWrapper>
