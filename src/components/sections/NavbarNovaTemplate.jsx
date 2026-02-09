@@ -25,6 +25,7 @@ function NavbarNovaTemplate({
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
+      setIsMobileMenuOpen(false)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
