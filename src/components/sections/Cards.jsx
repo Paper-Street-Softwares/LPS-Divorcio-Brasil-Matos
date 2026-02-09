@@ -105,7 +105,7 @@ function Cards({ colorMode }) {
                   link={content.texts.cardsSection.linkCtaButton}
                   label={content.texts.cardsSection.ctaButtonText}
                   colorMode={colorMode}
-                  bgClass={`bg-primaryDark text-white`}
+                  bgClass={`bg-primaryDark text-white shadow-primaryDark/40`}
                 />
               </MotionDivDownToUp>
             </div>
