@@ -77,14 +77,21 @@ function NavbarNovaTemplate({
             }`}
           >
             {' '}
-            <img
-              src={content.texts.navbar.logo.img}
-              alt={content.texts.navbar.logo.alt}
-              className="w-[100%]"
-              width={195}
-              height={35}
-              fetchPriority="high"
-            />
+            <a
+              href="https://previa-principal.brasilmatos.com.br/"
+              target="_blank"
+              aria-label="Link para site principal das Advogadas"
+              className="cursor-pointer"
+            >
+              <img
+                src={content.texts.navbar.logo.img}
+                alt={content.texts.navbar.logo.alt}
+                className="w-[100%]"
+                width={195}
+                height={35}
+                fetchPriority="high"
+              />
+            </a>
           </div>
 
           {/* Desktop Nav */}
