@@ -10,6 +10,7 @@ import {
 import content from '../../content/content'
 import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
 import MotionDivDownToUp from '../animation/MotionDivDownToUp'
+import ButtonReflexo from '../interactives/ButtonReflexo'
 
 function FaqNovoTemplate({ colorMode }) {
   const faqs = Object.values(content.texts.faq.questions)
@@ -79,6 +80,27 @@ function FaqNovoTemplate({ colorMode }) {
               </Accordion>
             </MotionDivDownToUp>
           </div>
+
+          <MotionDivDownToUp>
+            <div
+              className={`flex justify-center mx-auto mt-12 w-fit transition-all cursor-pointer ${textOpacity}`}
+            >
+              {/* <a
+                href={content.texts.links.ctaWhatsapp}
+                className="w-fit"
+                target="_blank"
+              >
+                Clique aqui caso tenha mais dúvidas
+              </a> */}
+              <ButtonReflexo
+                icon={content.texts.svgs.wpp}
+                link={content.texts.links.ctaWhatsapp}
+                label={content.texts.hero.ctaButtonText}
+                colorMode={colorMode}
+                className="my-0"
+              />
+            </div>
+          </MotionDivDownToUp>
         </section>
       </SectionWrapper>
     </SectionArea>
