@@ -95,7 +95,7 @@ function FaqNovoTemplate({ colorMode }) {
               <ButtonReflexo
                 icon={content.texts.svgs.wpp}
                 link={content.texts.links.ctaWhatsapp}
-                label={content.texts.hero.ctaButtonText}
+                label={content.texts.faq.paragraph}
                 colorMode={colorMode}
                 className="my-0"
               />
