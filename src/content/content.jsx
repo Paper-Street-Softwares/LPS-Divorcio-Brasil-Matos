@@ -72,7 +72,7 @@ export const infos = {
     </div>
   ),
   obs: <span className="italic">A_Definir </span>,
-  instagramProfile: '', // Sem o @
+  instagramProfile: 'brasilmatosadv', // Sem o @
   facebookProfile: '',
   linkeDinProfile: '',
   x: '',
@@ -163,7 +163,7 @@ const content = {
         icon: <Check />,
         iconTwo: <Check />,
         text: ' Atendimento 100% online e sigiloso',
-        textTwo: ' Com orientação de advogada especializada',
+        textTwo: ' Com orientação de Advogada especializada',
       },
       secondaryCta: 'Contato',
       images: {
@@ -410,7 +410,7 @@ const content = {
       paragraphModalCta: 'Entre em contato',
       titleModal: 'A_Definir',
       ctaButtonAriaLabel: 'Botão para entrar em contato',
-      ctaButtonText: 'Falar diretamente com as advogadas',
+      ctaButtonText: 'Falar diretamente com as Advogadas',
       // aboutSocial: {
       //   img: {
       //     img: aboutSocialImg,
@@ -492,7 +492,7 @@ const content = {
     },
     ctaSecondary: {
       miniTag: 'FALE CONOSCO',
-      title: <h1>Fale agora com uma advogada</h1>,
+      title: <h1>Fale agora com uma Advogada</h1>,
       subtitle: (
         <div>
           <p className="mb-6 font-secondFont">
@@ -515,7 +515,7 @@ const content = {
             <span className="border-2 rounded-full p-1">
               <Check className="" width={17} height={17} />
             </span>{' '}
-            Atendimento humanizado e sigiloso com advogada especializada
+            Atendimento humanizado e sigiloso com Advogada especializada
           </div>
           <div className="flex items-start gap-2 mx-auto">
             {' '}

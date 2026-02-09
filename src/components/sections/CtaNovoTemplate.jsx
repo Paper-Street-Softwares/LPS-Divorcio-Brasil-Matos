@@ -60,7 +60,7 @@ function CtaNovoTemplate({ colorMode }) {
               {content.texts.ctaSecondary.subtitle}
             </p>
 
-            <div className={`rounded-lg p-4 mb-4 text-start`}>
+            <div className={`rounded-lg p-4 mb-4 text-start font-secondFont`}>
               {content.texts.ctaSecondary.container}
             </div>
 

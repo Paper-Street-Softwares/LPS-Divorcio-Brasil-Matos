@@ -74,9 +74,10 @@ export default function Index() {
               colorMode={colorMode}
               mapa={false}
               phoneSecond={false}
+              phone={true}
               expediente={false}
               adress={true}
-              email={false}
+              email={true}
               emailSecond={false}
               fraseFooter={true} // frase Google LLC
               obs={false}
