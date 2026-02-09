@@ -10,6 +10,7 @@ export default function ButtonReflexo({
   className,
   bgClass,
   id,
+  onclick,
   ...props
 }) {
   const { colorMode, whatsAppColor } = useColorMode()
@@ -51,6 +52,7 @@ export default function ButtonReflexo({
       rel="noopener noreferrer"
       href={link}
       aria-label="Botão de contato"
+      onClick={onclick}
       className={`${className}
           relative
           overflow-hidden
