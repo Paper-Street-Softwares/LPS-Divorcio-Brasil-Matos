@@ -55,19 +55,22 @@ export default function ButtonReflexo({
       href={link}
       aria-label="Botão de contato"
       onClick={onclick}
-      className={`${className}
-          relative
-          overflow-hidden
-          inline-flex
-          items-center
-          justify-center
-          ${colors} 
-          ${spacing}
-          font-normal font-secondFont rounded-full text-lg 
-          transition-all scale-100 hover:scale-90 duration-500 shadow-lg ${shadowClass} gap-3 text-paragraph3 tablet1:text-paragraph4
-          min-w-[10px] 
-          text-center 
-        `}
+      className={`
+  relative
+  overflow-hidden
+  inline-flex
+  items-center
+  justify-center
+  ${colors} 
+  ${spacing}
+  font-normal font-secondFont rounded-full text-lg 
+  transition-all scale-100 hover:scale-90 duration-500
+  ${shadowClass}
+  gap-3 text-paragraph3 tablet1:text-paragraph4 shadow-lg
+  min-w-[10px] 
+  text-center
+  ${className}
+`}
     >
       {reflexAnimation && (
         <span
