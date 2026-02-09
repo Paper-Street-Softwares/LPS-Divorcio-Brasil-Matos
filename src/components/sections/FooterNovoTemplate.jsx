@@ -59,7 +59,7 @@ function FooterNovoTemplate({
             >
               {/* Logo e infos */}
               <div className="space-y-6">
-                <div className=" w-fit">
+                <div className="w-fit">
                   <a
                     href="https://previa-principal.brasilmatos.com.br/"
                     target="_blank"
@@ -69,7 +69,7 @@ function FooterNovoTemplate({
                     <img
                       src={content.texts.navbar.logo.img}
                       alt={content.texts.navbar.logo.alt}
-                      className="w-[57.6%]"
+                      className="w-[187px]"
                       width={187}
                       height={119}
                     />
