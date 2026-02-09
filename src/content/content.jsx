@@ -72,7 +72,7 @@ export const infos = {
     </div>
   ),
   obs: <span className="italic">A_Definir </span>,
-  instagramProfile: '', // Sem o @
+  instagramProfile: 'brasilmatosadv', // Sem o @
   facebookProfile: '',
   linkeDinProfile: '',
   x: '',

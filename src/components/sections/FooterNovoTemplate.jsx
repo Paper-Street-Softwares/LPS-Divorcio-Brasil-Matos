@@ -10,14 +10,11 @@ import content from '../../content/content'
 function FooterNovoTemplate({
   mapa,
   colorMode,
-  phone,
   phoneSecond,
   expediente,
   adress,
   email,
   emailSecond,
-  fraseFooter,
-  obs,
 }) {
   const labels = content.texts.navbar.menuItems
   const ids = content.texts.navbar.menuId
@@ -37,7 +34,7 @@ function FooterNovoTemplate({
       text = 'text-corTitulosPreto'
       textOpacity = 'text-corOutrosTextosPreto'
       iconColor = 'text-primaryDark/60'
-      backgroundMode = 'bg-white'
+      backgroundMode = 'bg-secondary/60'
       break
     case 'dark':
       text = 'text-corTitulosBranca'
@@ -58,14 +55,14 @@ function FooterNovoTemplate({
         <footer className={`${textOpacity}`}>
           <div className="container mx-auto">
             <div
-              className={`grid sm:grid-cols-2 lg:grid-cols-3 ${grid} items-start gap-12 tablet2:gap-2 desktop1:gap-12 mb-8 w-full`}
+              className={`grid sm:grid-cols-2 lg:grid-cols-3 ${grid} items-start gap-12 tablet2:gap-2 desktop1:gap-12 mb-8 w-full text-justify`}
             >
               {/* Logo e infos */}
               <div className="space-y-6">
                 <img
                   src={content.texts.navbar.logo.img}
                   alt={content.texts.navbar.logo.alt}
-                  className="w-[70%]"
+                  className="w-[50%]"
                   width={187}
                   height={119}
                 />
@@ -85,24 +82,7 @@ function FooterNovoTemplate({
                       {content.texts.infos.footerexpediente}
                     </>
                   )}
-                  {obs && (
-                    <>
-                      <p className="mt-2 font-secondFont">
-                        {content.texts.infos.obsFooter}
-                      </p>
-                    </>
-                  )}
                 </p>
-                <div className="flex gap-4">
-                  <FooterSocialIcons
-                    instagram
-                    facebook
-                    linkedin
-                    tiktok
-                    x
-                    youtube
-                  />
-                </div>
               </div>
 
               {/* Links rápidos */}
@@ -114,37 +94,35 @@ function FooterNovoTemplate({
                     Links Rápidos
                   </h1>
                   <ul className="space-y-4 font-secondFont font-light">
-                    {labels.map((item, index) => {
-                      const id = ids[index]
-
-                      return (
-                        <li key={id}>
-                          <a
-                            href={`#${id}`}
-                            aria-label={`Link para ${item}`}
-                            title={item}
-                            data-track={id}
-                            className="cursor-pointer bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px]"
-                            onClick={(e) => {
-                              e.preventDefault()
-                              const el = document.getElementById(id)
-                              if (el) {
-                                const yOffset = -90
-                                const y =
-                                  el.getBoundingClientRect().top +
-                                  window.scrollY +
-                                  yOffset
-
-                                window.scrollTo({ top: y, behavior: 'smooth' })
-                              }
-                            }}
-                          >
-                            {item}
-                          </a>
-                        </li>
-                      )
-                    })}
+                    {labels.map((item, index) => (
+                      <li key={item}>
+                        <Link
+                          to={ids[index]}
+                          aria-label={`Link para ${item}`}
+                          smooth={true}
+                          duration={500}
+                          offset={-90}
+                          spy={true}
+                          hashSpy={true}
+                          tag="a"
+                          href={`#${ids[index]}`}
+                          className="cursor-pointer bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px]"
+                        >
+                          {item}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
+                  <div className="flex gap-4 mt-6">
+                    <FooterSocialIcons
+                      instagram
+                      facebook
+                      linkedin
+                      tiktok
+                      x
+                      youtube
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -165,14 +143,12 @@ function FooterNovoTemplate({
                         </span>
                       </li>
                     )}
-                    {phone && (
-                      <li className="flex items-center gap-3">
-                        <Phone className={`w-5 h-5 shrink-0 ${iconColor}`} />
-                        <span className="font-secondFont font-light">
-                          {content.texts.infos.phone}
-                        </span>
-                      </li>
-                    )}
+                    <li className="flex items-center gap-3">
+                      <Phone className={`w-5 h-5 shrink-0 ${iconColor}`} />
+                      <span className="font-secondFont font-light">
+                        {content.texts.infos.phone}
+                      </span>
+                    </li>
                     {phoneSecond && (
                       <li className="flex items-center gap-3">
                         <Phone className={`w-5 h-5 shrink-0 ${iconColor}`} />
@@ -184,7 +160,7 @@ function FooterNovoTemplate({
                     {email && (
                       <li className="flex items-center gap-3">
                         <Mail className={`w-5 h-5 shrink-0 ${iconColor}`} />
-                        <span className="font-secondFont font-light text-paragraph2 tablet2:text-paragraph3 desktop1:text-paragraph3">
+                        <span className="font-secondFont font-light text-paragraph4">
                           {content.texts.infos.email}
                         </span>
                       </li>
@@ -219,8 +195,8 @@ function FooterNovoTemplate({
             </div>
 
             <hr
-              className={`pb-6 border-t ${text} ${
-                colorMode === 'light' ? 'opacity-90' : 'opacity-20'
+              className={`pb-6 border-t border-black ${
+                colorMode === 'light' ? 'opacity-10 ' : 'opacity-20'
               } w-full`}
             />
 
@@ -247,14 +223,13 @@ function FooterNovoTemplate({
                   Paper Street
                 </a>
               </div>
-              {fraseFooter && (
-                <p
-                  className={`font-secondFont text-paragraph2 desktop1:text-paragraph3 mt-4 ${textOpacity}`}
-                >
-                  Esse site não faz parte do Google LLC nem do Facebook Inc. e
-                  não oferecemos nenhum tipo de serviço oficial do governo.
-                </p>
-              )}
+              <p
+                className={`font-secondFont text-paragraph2 desktop1:text-paragraph3 mt-4 ${textOpacity}`}
+              >
+                Esse site não faz parte do Google LLC nem do Facebook Inc. e não
+                oferecemos nenhum tipo de serviço oficial do governo.
+                Trabalhamos exclusivamente com serviços jurídicos.
+              </p>
             </div>
           </div>
 
