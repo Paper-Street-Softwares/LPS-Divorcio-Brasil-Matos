@@ -35,7 +35,7 @@ export const infos = {
   name: 'Brasil Matos Advocacia',
   email: 'contato', // Email desejado pelo cliente
   emailSecundario: 'A_Definir', // Email desejado pelo cliente
-  domain: 'divorcio.brasilmatos.com.br', // Sem "www"
+  domain: 'brasilmatos.com.br', // Sem "www"
   phone: {
     ddd: '11',
     firstPart: '94772', // Apenas os 5 primeiros números (incluindo o 9)
@@ -355,7 +355,7 @@ const content = {
           subtitle: 'A_Definir',
         },
       },
-      ctaButtonText: 'Recuperar minha paz ao dirigir',
+      ctaButtonText: 'Recuperar minha paz',
     },
     maps: {
       minitag: 'A_Definir',

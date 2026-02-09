@@ -34,9 +34,11 @@ export default function ButtonReflexo({
     default: 'bg-black/40',
   }
 
-  const colors = effectiveWhatsAppColor
-    ? whatsAppThemes[colorMode]
-    : (bgClass ?? themes[colorMode])
+  const colors = bgClass
+    ? bgClass
+    : effectiveWhatsAppColor
+      ? whatsAppThemes[colorMode]
+      : themes[colorMode]
 
   const shineColor = shineThemes[colorMode]
   const spacing = padding || 'px-6 py-3'
