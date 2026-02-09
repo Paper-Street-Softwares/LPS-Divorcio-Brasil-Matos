@@ -182,7 +182,8 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                             >
                               <Typography
                                 component="span"
-                                className={`${text}`}
+                                className={`${text} font-secondFont`}
+                                sx={{ fontFamily: 'Inter, sans-serif' }}
                               >
                                 {item.title}
                               </Typography>
@@ -193,7 +194,10 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                                 backgroundColor: bgAccordion,
                               }}
                             >
-                              <Typography className={`${textOpacity}`}>
+                              <Typography
+                                className={`${textOpacity}`}
+                                sx={{ fontFamily: 'Inter, sans-serif' }}
+                              >
                                 {item.subtitle}
                               </Typography>
                             </AccordionDetails>
