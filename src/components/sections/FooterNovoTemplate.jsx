@@ -59,13 +59,23 @@ function FooterNovoTemplate({
             >
               {/* Logo e infos */}
               <div className="space-y-6">
-                <img
-                  src={content.texts.navbar.logo.img}
-                  alt={content.texts.navbar.logo.alt}
-                  className="w-[50%]"
-                  width={187}
-                  height={119}
-                />
+                <div className="w-fit">
+                  <a
+                    href="https://previa-principal.brasilmatos.com.br/"
+                    target="_blank"
+                    aria-label="Link para site principal das Advogadas"
+                    className="cursor-pointer bg-red-500"
+                  >
+                    <img
+                      src={content.texts.navbar.logo.img}
+                      alt={content.texts.navbar.logo.alt}
+                      className="max-w-[100%]"
+                      width={187}
+                      height={119}
+                    />
+                  </a>
+                </div>
+
                 <p
                   className={`leading-relaxed font-secondFont font-light ${textOpacity}`}
                 >
