@@ -61,7 +61,7 @@ function FooterNovoTemplate({
               <div className="space-y-6">
                 <div className="w-fit">
                   <a
-                    href="https://sop-brasil-matos.vercel.app/"
+                    href="https://brasilmatos.com.br/"
                     target="_blank"
                     aria-label="Link para site principal das Advogadas"
                     className="cursor-pointer w-fit"

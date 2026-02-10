@@ -78,7 +78,7 @@ function NavbarNovaTemplate({
           >
             {" "}
             <a
-              href="https://sop-brasil-matos.vercel.app/"
+              href="https://brasilmatos.com.br/"
               target="_blank"
               aria-label="Link para site principal das Advogadas"
               className="cursor-pointer"

@@ -613,7 +613,7 @@ const content = {
         },
       },
       ctaButtonText: "Clique aqui e conheça nosso escritório",
-      linkCtaButton: "https://sop-brasil-matos.vercel.app/",
+      linkCtaButton: "https://brasilmatos.com.br/",
     },
     // team: {
     //   miniTag: 'A_Definir',
