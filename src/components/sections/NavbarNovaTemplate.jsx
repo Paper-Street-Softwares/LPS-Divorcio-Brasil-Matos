@@ -1,14 +1,14 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import { MessageCircle, Menu, X } from 'lucide-react'
-import { Button } from '../interactives/ButtonNovoTemplate'
-import { motion } from 'framer-motion'
-import SectionAria from '../../components/sectionElements/SectionArea'
-import SectionWrapper from '../../components/sectionElements/SectionWrapper'
-import content from '../../content/content'
-import { Link } from 'react-scroll'
-import ButtonReflexo from '../interactives/ButtonReflexo'
-import { useContext } from 'react'
+import React from "react";
+import { useState, useEffect } from "react";
+import { MessageCircle, Menu, X } from "lucide-react";
+import { Button } from "../interactives/ButtonNovoTemplate";
+import { motion } from "framer-motion";
+import SectionAria from "../../components/sectionElements/SectionArea";
+import SectionWrapper from "../../components/sectionElements/SectionWrapper";
+import content from "../../content/content";
+import { Link } from "react-scroll";
+import ButtonReflexo from "../interactives/ButtonReflexo";
+import { useContext } from "react";
 
 function NavbarNovaTemplate({
   colorMode,
@@ -18,45 +18,45 @@ function NavbarNovaTemplate({
   colorMenu,
   bgOpacitySidebar,
 }) {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [active, setActive] = useState(null)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [active, setActive] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-      setIsMobileMenuOpen(false)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 20);
+      setIsMobileMenuOpen(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const labels = content.texts.navbar.menuItems
-  const ids = content.texts.navbar.menuId
+  const labels = content.texts.navbar.menuItems;
+  const ids = content.texts.navbar.menuId;
 
   switch (colorMode) {
-    case 'light':
-      backgrondMode = 'bg-white'
-      textOpacity = 'text-corTitulosPreto'
-      hoverLinks = ' bg-gradient-to-r from-primaryDark to-primaryDark '
-      colorMenu = 'text-primaryDark'
-      bgOpacitySidebar = 'bg-white/70'
+    case "light":
+      backgrondMode = "bg-white";
+      textOpacity = "text-corTitulosPreto";
+      hoverLinks = " bg-gradient-to-r from-primaryDark to-primaryDark ";
+      colorMenu = "text-primaryDark";
+      bgOpacitySidebar = "bg-white/70";
 
-      break
-    case 'dark':
-      backgrondMode = 'bg-black'
-      textOpacity = 'text-corOutrosTextosBranca'
-      hoverLinks = ' bg-gradient-to-r from-primaryLight to-primaryLight '
-      colorMenu = 'text-primaryLight'
-      bgOpacitySidebar = 'bg-black/70'
+      break;
+    case "dark":
+      backgrondMode = "bg-black";
+      textOpacity = "text-corOutrosTextosBranca";
+      hoverLinks = " bg-gradient-to-r from-primaryLight to-primaryLight ";
+      colorMenu = "text-primaryLight";
+      bgOpacitySidebar = "bg-black/70";
 
-      break
-    case 'default':
-      backgrondMode = 'bg-white'
-      textOpacity = 'text-corOutrosTextosBranca'
-      hoverLinks = ' bg-gradient-to-r from-primaryDark to-primaryDark '
-      colorMenu = 'text-primaryDark'
-      bgOpacitySidebar = 'bg-white/70'
+      break;
+    case "default":
+      backgrondMode = "bg-white";
+      textOpacity = "text-corOutrosTextosBranca";
+      hoverLinks = " bg-gradient-to-r from-primaryDark to-primaryDark ";
+      colorMenu = "text-primaryDark";
+      bgOpacitySidebar = "bg-white/70";
   }
 
   return (
@@ -65,20 +65,20 @@ function NavbarNovaTemplate({
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent ${
           isScrolled
             ? `${backgrondMode} backdrop-blur-md py-2 shadow-sm border-shadowHero/10 h-auto`
-            : 'bg-transparent border-border/40 py-3 phone2:h-auto'
+            : "bg-transparent border-border/40 py-3 phone2:h-auto"
         }`}
       >
         <div className="container mx-auto flex items-center m-auto max-w-[1215px] h-full w-[90%] justify-between py-2">
           <div
             className={`flex flex-col z-20 relative  ${
               isScrolled
-                ? 'w-[20%] tablet1:w-[20%] tablet2:w-[15%] desktop1:w-[15%] desktop2:w-[15%] desktop3:w-[10%] transition-all duration-700'
-                : 'w-[40%] phone2:w-[30%] phone3:w-[35%] tablet1:w-[30%] tablet2:w-[20%] desktop1:w-[20%] desktop3:w-[15%] transition-all duration-700'
+                ? "w-[20%] tablet1:w-[20%] tablet2:w-[15%] desktop1:w-[15%] desktop2:w-[15%] desktop3:w-[10%] transition-all duration-700"
+                : "w-[40%] phone2:w-[30%] phone3:w-[35%] tablet1:w-[30%] tablet2:w-[20%] desktop1:w-[20%] desktop3:w-[15%] transition-all duration-700"
             }`}
           >
-            {' '}
+            {" "}
             <a
-              href="https://previa-principal.brasilmatos.com.br/"
+              href="https://sop-brasil-matos.vercel.app/"
               target="_blank"
               aria-label="Link para site principal das Advogadas"
               className="cursor-pointer"
@@ -97,11 +97,11 @@ function NavbarNovaTemplate({
           {/* Desktop Nav */}
           <div className="hidden desktop1:flex items-center gap-8 text-sm font-secondFont font-medium">
             {labels.map((item, index) => {
-              const id = ids[index]
+              const id = ids[index];
 
               return (
                 <ul>
-                  {' '}
+                  {" "}
                   <li key={id}>
                     <a
                       href={`#${id}`}
@@ -110,16 +110,16 @@ function NavbarNovaTemplate({
                       data-track={id}
                       className={`cursor-pointer ${hoverLinks} bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px] ${textOpacity} font-secondFont`}
                       onClick={(e) => {
-                        e.preventDefault()
-                        const el = document.getElementById(id)
+                        e.preventDefault();
+                        const el = document.getElementById(id);
                         if (el) {
-                          const yOffset = -90
+                          const yOffset = -90;
                           const y =
                             el.getBoundingClientRect().top +
                             window.scrollY +
-                            yOffset
+                            yOffset;
 
-                          window.scrollTo({ top: y, behavior: 'smooth' })
+                          window.scrollTo({ top: y, behavior: "smooth" });
                         }
                       }}
                     >
@@ -127,7 +127,7 @@ function NavbarNovaTemplate({
                     </a>
                   </li>
                 </ul>
-              )
+              );
             })}
             <ButtonReflexo
               label="Contato"
@@ -180,11 +180,11 @@ function NavbarNovaTemplate({
                   className={`flex flex-col gap-6 max-w-[500px] text-center items-center p-4 text-lg mx-auto font-secondFont font-medium border-l border-r border-b border-primary/20 rounded-md ${backgrondMode}`}
                 >
                   {labels.map((item, index) => {
-                    const id = ids[index]
+                    const id = ids[index];
 
                     return (
                       <ul>
-                        {' '}
+                        {" "}
                         <li key={id}>
                           <a
                             href={`#${id}`}
@@ -193,16 +193,16 @@ function NavbarNovaTemplate({
                             data-track={id}
                             className={`cursor-pointer bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px] ${textOpacity}`}
                             onClick={(e) => {
-                              e.preventDefault()
-                              const el = document.getElementById(id)
+                              e.preventDefault();
+                              const el = document.getElementById(id);
                               if (el) {
-                                const yOffset = -90
+                                const yOffset = -90;
                                 const y =
                                   el.getBoundingClientRect().top +
                                   window.scrollY +
-                                  yOffset
+                                  yOffset;
 
-                                window.scrollTo({ top: y, behavior: 'smooth' })
+                                window.scrollTo({ top: y, behavior: "smooth" });
                               }
                             }}
                           >
@@ -210,7 +210,7 @@ function NavbarNovaTemplate({
                           </a>
                         </li>
                       </ul>
-                    )
+                    );
                   })}
                   <ButtonReflexo
                     onclick={() => setIsMobileMenuOpen(false)}
@@ -240,7 +240,7 @@ function NavbarNovaTemplate({
         </div>
       </nav>
     </SectionWrapper>
-  )
+  );
 }
 
-export default NavbarNovaTemplate
+export default NavbarNovaTemplate;

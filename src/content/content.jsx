@@ -1,13 +1,13 @@
-import logo from '../assets/imgs/logo/logo.webp'
-import heroDefaultImg from '../assets/imgs/hero/lawHero.webp'
-import heroDefaultMobileImage from '../assets/imgs/hero/lawHeroMobile.webp'
-import imgFeatures from '../assets/imgs/features/imgServices.webp'
-import aboutImg from '../assets/imgs/about/aboutImg.webp'
+import logo from "../assets/imgs/logo/logo.webp";
+import heroDefaultImg from "../assets/imgs/hero/lawHero.webp";
+import heroDefaultMobileImage from "../assets/imgs/hero/lawHeroMobile.webp";
+import imgFeatures from "../assets/imgs/features/imgServices.webp";
+import aboutImg from "../assets/imgs/about/aboutImg.webp";
 // import team1 from '../assets/imgs/team/team1.webp'
 // import team2 from '../assets/imgs/team/team2.webp'
 // import aboutSocialImg from '../assets/imgs/about/aboutSocial.webp'
 
-import imgSteps from '../assets/imgs/steps/imgSteps.webp'
+import imgSteps from "../assets/imgs/steps/imgSteps.webp";
 
 import {
   Baby,
@@ -23,33 +23,33 @@ import {
   Car,
   HandCoins,
   Check,
-} from 'lucide-react'
-import { Users } from 'lucide-react'
-import { FileText } from 'lucide-react'
-import { User } from 'lucide-react'
-import { Building } from 'lucide-react'
+} from "lucide-react";
+import { Users } from "lucide-react";
+import { FileText } from "lucide-react";
+import { User } from "lucide-react";
+import { Building } from "lucide-react";
 
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 
 export const infos = {
-  name: 'Brasil Matos Advocacia',
-  email: 'contato', // Email desejado pelo cliente
-  emailSecundario: 'A_Definir', // Email desejado pelo cliente
-  domain: 'brasilmatos.com.br', // Sem "www"
+  name: "Brasil Matos Advocacia",
+  email: "contato", // Email desejado pelo cliente
+  emailSecundario: "A_Definir", // Email desejado pelo cliente
+  domain: "brasilmatos.com.br", // Sem "www"
   phone: {
-    ddd: '11',
-    firstPart: '94772', // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: '5232', // Apenas os 4 últimos números
+    ddd: "11",
+    firstPart: "94772", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "5232", // Apenas os 4 últimos números
   },
   phoneSecundario: {
-    ddd: 'A_Definir',
-    firstPart: 'A_Definir', // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: 'A_Definir', // Apenas os 4 últimos números
+    ddd: "A_Definir",
+    firstPart: "A_Definir", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "A_Definir", // Apenas os 4 últimos números
   },
   phoneTerciario: {
-    ddd: 'A_Definir',
-    firstPart: 'A_Definir', // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: 'A_Definir', // Apenas os 4 últimos números
+    ddd: "A_Definir",
+    firstPart: "A_Definir", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "A_Definir", // Apenas os 4 últimos números
   },
   endereco: (
     <div>
@@ -72,18 +72,18 @@ export const infos = {
     </div>
   ),
   obs: <span className="italic">A_Definir </span>,
-  instagramProfile: 'brasilmatosadv', // Sem o @
-  facebookProfile: '',
-  linkeDinProfile: '',
-  x: '',
-  tiktokProfile: '',
+  instagramProfile: "brasilmatosadv", // Sem o @
+  facebookProfile: "",
+  linkeDinProfile: "",
+  x: "",
+  tiktokProfile: "",
 
   whatsappDefaultMessage:
-    'Olá! Vim através do site de vocês e gostaria de tirar umas dúvidas.',
+    "Olá! Vim através do site de vocês e gostaria de tirar umas dúvidas.",
   whatsChatDefaultMessage:
-    'Gostaria de falar conosco agora mesmo? Clque abaixo 👇',
-  slogan: '',
-}
+    "Gostaria de falar conosco agora mesmo? Clque abaixo 👇",
+  slogan: "",
+};
 
 const content = {
   texts: {
@@ -97,23 +97,23 @@ const content = {
         alt: `Logomarca ${infos.name}`,
       },
       menuItems: [
-        'Início',
-        'Serviços',
-        'Sobre',
-        'Perguntas',
+        "Início",
+        "Serviços",
+        "Sobre",
+        "Perguntas",
         // 'Blog',
         // 'Mapa',
       ],
-      menuId: ['home', 'feature', 'about', 'faq'],
-      ariaLabel: 'Botão de Contato',
-      ctaButtonText: 'Contato',
-      ctaButtonTextResponsive: 'Contato',
+      menuId: ["home", "feature", "about", "faq"],
+      ariaLabel: "Botão de Contato",
+      ctaButtonText: "Contato",
+      ctaButtonTextResponsive: "Contato",
     },
     hero: {
-      miniTag: 'DIVÓRCIO SEM COMPLICAÇÃO',
+      miniTag: "DIVÓRCIO SEM COMPLICAÇÃO",
       title: (
         <h1>
-          DIVÓRCIO{' '}
+          DIVÓRCIO{" "}
           <span className="destaque relative italic font-light">
             ONLINE
             <span>
@@ -142,7 +142,7 @@ const content = {
                 />
               </svg>
             </span>
-          </span>{' '}
+          </span>{" "}
           — RÁPIDO, SEGURO E SEM SAIR DE CASA
         </h1>
       ),
@@ -154,63 +154,63 @@ const content = {
       ),
       heroDefaultImage: heroDefaultImg, // img da pessoa mobile
       heroDefaultMobileImage: heroDefaultMobileImage, // img da pessoa mobile
-      alt: 'Imagem ilustrativa da Seção Início',
+      alt: "Imagem ilustrativa da Seção Início",
       ctaButtonAriaLabel:
-        'Botão para chamada de ação para contato pelo whatsapp',
-      ctaButtonText: 'Quero resolver meu divórcio agora',
-      ctaButtonTextSecondary: 'A_Definir',
+        "Botão para chamada de ação para contato pelo whatsapp",
+      ctaButtonText: "Quero resolver meu divórcio agora",
+      ctaButtonTextSecondary: "A_Definir",
       obsHero: {
         icon: <Check />,
         iconTwo: <Check />,
-        text: ' Atendimento 100% online e sigiloso',
-        textTwo: ' Com orientação de Advogada especializada',
+        text: " Atendimento 100% online e sigiloso",
+        textTwo: " Com orientação de Advogada especializada",
       },
-      secondaryCta: 'Contato',
+      secondaryCta: "Contato",
       images: {
         static: {
           img: {},
-          alt: '',
+          alt: "",
         },
         slide1: {
           img: {},
-          alt: '',
+          alt: "",
         },
         slide2: {
           img: {},
-          alt: '',
+          alt: "",
         },
         slide3: {
           img: {},
-          alt: '',
+          alt: "",
         },
       },
     },
     important: {
-      miniTag: 'A_Definir',
-      title: 'A_Definir',
+      miniTag: "A_Definir",
+      title: "A_Definir",
       cards: {
         card1: {
-          title: 'A_Definir',
-          paragraph: 'A_Definir',
+          title: "A_Definir",
+          paragraph: "A_Definir",
         },
         card2: {
-          title: 'A_Definir',
-          paragraph: 'A_Definir',
+          title: "A_Definir",
+          paragraph: "A_Definir",
         },
         card3: {
-          title: 'A_Definir',
-          paragraph: 'A_Definir',
+          title: "A_Definir",
+          paragraph: "A_Definir",
         },
         card4: {
-          title: 'A_Definir',
-          paragraph: 'A_Definir',
+          title: "A_Definir",
+          paragraph: "A_Definir",
         },
       },
-      fraseObs: 'A_Definir',
-      ctaButtonText: 'A_Definir',
+      fraseObs: "A_Definir",
+      ctaButtonText: "A_Definir",
     },
     features: {
-      miniTag: 'Seu divórcio não precisa ser complicado',
+      miniTag: "Seu divórcio não precisa ser complicado",
       title: (
         <h1>
           Sabemos que o momento do divórcio é
@@ -219,16 +219,16 @@ const content = {
         </h1>
       ),
       subtitle:
-        'Por isso, oferecemos um atendimento humanizado, rápido e totalmente online, para que você resolva tudo com tranquilidade e sem burocracia. Você não precisa enfrentar filas, deslocamentos ou desgaste emocional. Nós cuidamos de tudo para você.',
+        "Por isso, oferecemos um atendimento humanizado, rápido e totalmente online, para que você resolva tudo com tranquilidade e sem burocracia. Você não precisa enfrentar filas, deslocamentos ou desgaste emocional. Nós cuidamos de tudo para você.",
       imgFeatures: imgFeatures,
-      alt: 'imagem representativa da Seção Serviços',
-      titleMessageFeature: 'A_Definir',
-      subtitleMessageFeature: 'A_Definir',
+      alt: "imagem representativa da Seção Serviços",
+      titleMessageFeature: "A_Definir",
+      subtitleMessageFeature: "A_Definir",
       cards: {
         card1: {
-          title: 'Divórcio extrajudicial',
+          title: "Divórcio extrajudicial",
           subtitle:
-            'Resolvido em cartório, de forma rápida e sem processo judicial.',
+            "Resolvido em cartório, de forma rápida e sem processo judicial.",
           description: (
             <div>
               A_Definir
@@ -238,13 +238,13 @@ const content = {
             </div>
           ),
           icon: <Lock />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card2: {
-          title: 'Divórcio consensual',
+          title: "Divórcio consensual",
           subtitle:
-            'Quando há acordo entre as partes, o divórcio acontece de forma simples e menos desgastante.',
+            "Quando há acordo entre as partes, o divórcio acontece de forma simples e menos desgastante.",
           description: (
             <div>
               A_Definir
@@ -254,13 +254,13 @@ const content = {
             </div>
           ),
           icon: <Car />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card3: {
-          title: 'Divórcio judicial',
+          title: "Divórcio judicial",
           subtitle:
-            'Indicado quando não há acordo, com acompanhamento jurídico para proteger seus direitos.',
+            "Indicado quando não há acordo, com acompanhamento jurídico para proteger seus direitos.",
           description: (
             <div>
               A_Definir <br />
@@ -269,13 +269,13 @@ const content = {
             </div>
           ),
           icon: <HandCoins />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card4: {
-          title: 'Divórcio com ou sem filhos',
+          title: "Divórcio com ou sem filhos",
           subtitle:
-            'Orientação completa, com atenção especial às questões que envolvem filhos e responsabilidades.',
+            "Orientação completa, com atenção especial às questões que envolvem filhos e responsabilidades.",
           description: (
             <div>
               A_Definir
@@ -285,13 +285,13 @@ const content = {
             </div>
           ),
           icon: <FileText />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card5: {
-          title: 'Divórcio com partilha de bens',
+          title: "Divórcio com partilha de bens",
           subtitle:
-            'Análise e divisão justa dos bens, garantindo segurança em cada etapa do processo.',
+            "Análise e divisão justa dos bens, garantindo segurança em cada etapa do processo.",
           description: (
             <div>
               A_Definir
@@ -318,13 +318,13 @@ const content = {
               <path d="M12 18V6" />
             </svg>
           ),
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card6: {
-          title: 'Divórcio sem partilha imediata',
+          title: "Divórcio sem partilha imediata",
           subtitle:
-            'Possibilidade de se divorciar agora e resolver a partilha em um momento posterior.',
+            "Possibilidade de se divorciar agora e resolver a partilha em um momento posterior.",
           description: (
             <div>
               A_Definir
@@ -334,50 +334,50 @@ const content = {
             </div>
           ),
           icon: <Scale />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
       },
       moreFeatures: {
         card1: {
-          ico: 'A_Definir',
-          title: 'A_Definir',
-          subtitle: 'A_Definir',
+          ico: "A_Definir",
+          title: "A_Definir",
+          subtitle: "A_Definir",
         },
         card2: {
-          ico: 'A_Definir',
-          title: 'A_Definir',
-          subtitle: 'A_Definir',
+          ico: "A_Definir",
+          title: "A_Definir",
+          subtitle: "A_Definir",
         },
         card3: {
-          ico: 'A_Definir',
-          title: 'A_Definir',
-          subtitle: 'A_Definir',
+          ico: "A_Definir",
+          title: "A_Definir",
+          subtitle: "A_Definir",
         },
       },
-      ctaButtonText: 'Recuperar minha paz',
+      ctaButtonText: "Recuperar minha paz",
     },
     maps: {
-      minitag: 'A_Definir',
-      title: 'A_Definir',
-      subtitle: 'A_Definir',
-      embedsrc: 'A_Definir',
+      minitag: "A_Definir",
+      title: "A_Definir",
+      subtitle: "A_Definir",
+      embedsrc: "A_Definir",
     },
     about: {
       imagem: {
         img: aboutImg,
-        alt: 'Imagem ilustrativa da Seção Sobre',
+        alt: "Imagem ilustrativa da Seção Sobre",
       },
-      miniTag: 'BRASIL MATOS ADVOCACIA',
+      miniTag: "BRASIL MATOS ADVOCACIA",
       title: (
         <h1>
           Por que escolher
           <span className="destaque italic font-light"> nosso</span> escritório?
         </h1>
       ),
-      SecondPartTitle: '',
+      SecondPartTitle: "",
       subtitle:
-        'Nosso compromisso é tornar esse momento mais leve, rápido e seguro para você.',
+        "Nosso compromisso é tornar esse momento mais leve, rápido e seguro para você.",
       paragraph: (
         <div>
           <span className="flex gap-2 items-center">
@@ -395,7 +395,7 @@ const content = {
         </div>
       ),
 
-      buttonModalLabelAbout: 'Continuar lendo',
+      buttonModalLabelAbout: "Continuar lendo",
       modal: (
         <p className="text-mutedForeground font-secondFont">
           A_Definir
@@ -407,10 +407,10 @@ const content = {
           A_Definir
         </p>
       ),
-      paragraphModalCta: 'Entre em contato',
-      titleModal: 'A_Definir',
-      ctaButtonAriaLabel: 'Botão para entrar em contato',
-      ctaButtonText: 'Falar diretamente com as Advogadas',
+      paragraphModalCta: "Entre em contato",
+      titleModal: "A_Definir",
+      ctaButtonAriaLabel: "Botão para entrar em contato",
+      ctaButtonText: "Falar diretamente com as Advogadas",
       // aboutSocial: {
       //   img: {
       //     img: aboutSocialImg,
@@ -455,7 +455,7 @@ const content = {
     //   },
     // },
     steps: {
-      miniTag: 'A_Definir',
+      miniTag: "A_Definir",
       title: (
         <h1>
           A_Definir
@@ -463,35 +463,35 @@ const content = {
           A_Definir
         </h1>
       ),
-      subtitle: '',
+      subtitle: "",
       img: imgSteps,
-      alt: 'Imagem ilustrativa da Seção Passo a Passo',
+      alt: "Imagem ilustrativa da Seção Passo a Passo",
       cards: {
         card1: {
           stepNumber: 1,
-          cardTitle: 'A_Definir',
-          cardDescription: 'A_Definir',
+          cardTitle: "A_Definir",
+          cardDescription: "A_Definir",
         },
         card2: {
           stepNumber: 2,
-          cardTitle: 'A_Definir',
-          cardDescription: 'A_Definir',
+          cardTitle: "A_Definir",
+          cardDescription: "A_Definir",
         },
         card3: {
           stepNumber: 3,
-          cardTitle: 'A_Definir',
-          cardDescription: 'A_Definir',
+          cardTitle: "A_Definir",
+          cardDescription: "A_Definir",
         },
         card4: {
           stepNumber: 4,
-          cardTitle: 'A_Definir',
-          cardDescription: 'A_Definir',
+          cardTitle: "A_Definir",
+          cardDescription: "A_Definir",
         },
       },
-      ctaButtonText: 'A_Definir',
+      ctaButtonText: "A_Definir",
     },
     ctaSecondary: {
-      miniTag: 'FALE CONOSCO',
+      miniTag: "FALE CONOSCO",
       title: <h1>Fale agora com uma Advogada</h1>,
       subtitle: (
         <div>
@@ -504,38 +504,38 @@ const content = {
       container: (
         <div className="flex flex-col gap-3">
           <div className="flex items-start gap-2 mx-auto">
-            {' '}
+            {" "}
             <span className="border-2 rounded-full p-1">
               <Check className="" width={17} height={17} />
-            </span>{' '}
+            </span>{" "}
             Orientação clara sobre seus direitos no divórcio
           </div>
           <div className="flex items-start gap-2 mx-auto">
-            {' '}
+            {" "}
             <span className="border-2 rounded-full p-1">
               <Check className="" width={17} height={17} />
-            </span>{' '}
+            </span>{" "}
             Atendimento humanizado e sigiloso com Advogada especializada
           </div>
           <div className="flex items-start gap-2 mx-auto">
-            {' '}
+            {" "}
             <span className="border-2 rounded-full p-1">
               <Check className="" width={17} height={17} />
-            </span>{' '}
+            </span>{" "}
             Divórcio online, sem audiências e sem desgaste emocional
           </div>
           <div className="flex items-start gap-2 mx-auto">
-            {' '}
+            {" "}
             <span className="border-2 rounded-full p-1">
               <Check className="" width={17} height={17} />
-            </span>{' '}
+            </span>{" "}
             Acompanhamento rápido pelo WhatsApp, do início ao fim
           </div>
           <div className="flex items-start gap-2 mx-auto">
-            {' '}
+            {" "}
             <span className="border-2 rounded-full p-1">
               <Check className="" width={17} height={17} />
-            </span>{' '}
+            </span>{" "}
             Segurança para encerrar esse ciclo e seguir em frente
           </div>
         </div>
@@ -548,9 +548,9 @@ const content = {
       // titleDireita: (
       //   <h1 className="text-title5 my-3 font-mainFont">WhatsApp</h1>
       // ),
-      ctaButtonText: 'Quero iniciar meu divórcio online',
+      ctaButtonText: "Quero iniciar meu divórcio online",
       ctaButtonAriaLabel:
-        'Botão para chamada de ação para contato pelo whatsapp',
+        "Botão para chamada de ação para contato pelo whatsapp",
     },
     // blog: {
     //   miniTag: 'BLOG',
@@ -562,58 +562,58 @@ const content = {
     //   blogLink: 'mauromoncao.wordpress.com', //sem "https://"
     // },
     faq: {
-      miniTag: 'TIRE SUAS DÚVIDAS',
-      title: 'Perguntas Frequentes',
-      subtitle: 'Confira as perguntas abaixo para esclarecer suas dúvidas. ',
+      miniTag: "TIRE SUAS DÚVIDAS",
+      title: "Perguntas Frequentes",
+      subtitle: "Confira as perguntas abaixo para esclarecer suas dúvidas. ",
       questions: {
         question1: {
-          question: 'Preciso sair de casa?',
+          question: "Preciso sair de casa?",
           answer:
-            'Não. Todo o processo pode ser feito 100% online, sem deslocamentos, filas ou desgaste desnecessário. Você resolve tudo com segurança e conforto, de onde estiver.',
+            "Não. Todo o processo pode ser feito 100% online, sem deslocamentos, filas ou desgaste desnecessário. Você resolve tudo com segurança e conforto, de onde estiver.",
         },
         question2: {
-          question: 'Quanto tempo demora?',
+          question: "Quanto tempo demora?",
           answer:
-            'O prazo varia conforme o tipo de divórcio, mas em muitos casos o processo é rápido e pode ser iniciado no mesmo dia após a análise da documentação.',
+            "O prazo varia conforme o tipo de divórcio, mas em muitos casos o processo é rápido e pode ser iniciado no mesmo dia após a análise da documentação.",
         },
         question3: {
-          question: 'Precisa de audiência?',
+          question: "Precisa de audiência?",
           answer:
-            'Na maioria dos casos, não. O divórcio pode ser resolvido sem audiências, evitando exposição e situações desconfortáveis.',
+            "Na maioria dos casos, não. O divórcio pode ser resolvido sem audiências, evitando exposição e situações desconfortáveis.",
         },
         question4: {
-          question: 'Posso me divorciar mesmo sem acordo total?',
+          question: "Posso me divorciar mesmo sem acordo total?",
           answer:
-            'Sim. Mesmo sem acordo em todos os pontos, é possível dar entrada no divórcio. Cada caso é analisado com cuidado para garantir seus direitos e a melhor solução possível.',
+            "Sim. Mesmo sem acordo em todos os pontos, é possível dar entrada no divórcio. Cada caso é analisado com cuidado para garantir seus direitos e a melhor solução possível.",
         },
       },
-      paragraph: 'Clique aqui caso tenha mais dúvidas',
+      paragraph: "Clique aqui caso tenha mais dúvidas",
     },
     cardsSection: {
-      miniTag: 'Áreas de Atuação',
-      title: 'Atuação jurídica completa para proteger seus direitos',
+      miniTag: "Áreas de Atuação",
+      title: "Atuação jurídica completa para proteger seus direitos",
       subtitle:
-        'Soluções legais pensadas para prevenir conflitos, resolver problemas e garantir segurança jurídica em diferentes áreas do Direito.',
+        "Soluções legais pensadas para prevenir conflitos, resolver problemas e garantir segurança jurídica em diferentes áreas do Direito.",
       cards: {
         card1: {
-          title: 'Direito Civil',
+          title: "Direito Civil",
           icon: <User />,
         },
         card2: {
-          title: 'Direito do Consumidor',
+          title: "Direito do Consumidor",
           icon: <ShoppingCart />,
         },
         card3: {
-          title: 'Direito Imobiliário',
+          title: "Direito Imobiliário",
           icon: <Building />,
         },
         card4: {
-          title: 'Direito Trabalhista',
+          title: "Direito Trabalhista",
           icon: <BriefcaseBusiness />,
         },
       },
-      ctaButtonText: 'Clique aqui e conheça nosso escritório',
-      linkCtaButton: 'https://previa-principal.brasilmatos.com.br/',
+      ctaButtonText: "Clique aqui e conheça nosso escritório",
+      linkCtaButton: "https://sop-brasil-matos.vercel.app/",
     },
     // team: {
     //   miniTag: 'A_Definir',
@@ -883,13 +883,13 @@ const content = {
     // },
     footer: {
       copyrightLine: ` ${currentYear} - ${infos.name} - Todos os direitos reservados`,
-      footerDivulgacaoText: 'Gostaria de ter um site como este? Clique aqui',
-      midSectionName: 'Até mais',
+      footerDivulgacaoText: "Gostaria de ter um site como este? Clique aqui",
+      midSectionName: "Até mais",
       footerText:
-        'Agradecemos sua visita! Esperamos que em breve você se torne nosso cliente e desfrute de todos os benefícios que oferecemos.',
-      footerSocialText: 'Siga a gente nas redes sociais:',
-      footerNavegacaoText: 'NAVEGAÇÃO',
-      desenvolvidoPor: 'Desenvolvido com excelência por Paper Street',
+        "Agradecemos sua visita! Esperamos que em breve você se torne nosso cliente e desfrute de todos os benefícios que oferecemos.",
+      footerSocialText: "Siga a gente nas redes sociais:",
+      footerNavegacaoText: "NAVEGAÇÃO",
+      desenvolvidoPor: "Desenvolvido com excelência por Paper Street",
       privacidade: (
         <div class="phone3:max-w-3xl mx-auto tablet1:px-6 text-gray-900 leading-relaxed font-secondFont">
           <h1 class="text-3xl font-bold mb-6">Política de Privacidade</h1>
@@ -915,7 +915,7 @@ const content = {
 
           <ul class="list-disc ml-6 mb-6 space-y-2">
             <li>
-              <strong>Autoridade Nacional de Proteção de Dados (ANPD):</strong>{' '}
+              <strong>Autoridade Nacional de Proteção de Dados (ANPD):</strong>{" "}
               órgão responsável pela fiscalização e aplicação da LGPD.
             </li>
 
@@ -1122,9 +1122,9 @@ const content = {
         </div>
       ),
       pontos: {
-        ponto1: 'Profissionalismo',
-        ponto2: 'Experiência',
-        ponto3: 'Resultados',
+        ponto1: "Profissionalismo",
+        ponto2: "Experiência",
+        ponto3: "Resultados",
       },
     },
     // socios: {
@@ -1196,8 +1196,8 @@ const content = {
       year: currentYear,
       footerexpediente: infos.expediente,
       obsFooter: infos.obs,
-      footerNavegacaoText: 'NAVEGAÇÃO',
-      footerDivulgacaoText: 'Gostaria de ter um site como este? Clique aqui',
+      footerNavegacaoText: "NAVEGAÇÃO",
+      footerDivulgacaoText: "Gostaria de ter um site como este? Clique aqui",
     },
     svgs: {
       wpp: (
@@ -1213,11 +1213,11 @@ const content = {
       ),
     },
   },
-}
+};
 
 export const abstractions = {
   titleModal: <strong>{content.texts.about.title}</strong>,
   subtitleModal: <strong>{content.texts.about.subtitle}</strong>,
-}
+};
 
-export default content
+export default content;
