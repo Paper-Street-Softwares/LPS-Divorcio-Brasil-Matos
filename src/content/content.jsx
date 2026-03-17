@@ -54,7 +54,10 @@ export const infos = {
   endereco: (
     <div>
       {/* <p>Endereço:</p> */}
-      <p>Av. Paulista, nº 1471, Conj. 1110, <br />
+      <p>
+        Av. Paulista, nº 1471, Conj. 1110, <br />
+        São Paulo - SP, <br />
+        CEP: 01311-927
       </p>
     </div>
   ),
