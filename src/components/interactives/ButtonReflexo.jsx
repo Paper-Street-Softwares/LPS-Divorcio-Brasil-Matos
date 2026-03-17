@@ -1,5 +1,5 @@
-import { useColorMode } from '../../context/UseContextArchive'
-import { whatsAppThemes } from '../../context/UseContextArchive'
+import { useColorMode } from "../../context/UseContextArchive";
+import { whatsAppThemes } from "../../context/UseContextArchive";
 
 export default function ButtonReflexo({
   link,
@@ -10,47 +10,47 @@ export default function ButtonReflexo({
   className,
   bgClass,
   id,
-  onclick,
+  onClick,
   ...props
 }) {
-  const { colorMode, whatsAppColor } = useColorMode()
-  const isLigar = id === 'ligar'
-  const effectiveWhatsAppColor = isLigar ? false : whatsAppColor
+  const { colorMode, whatsAppColor } = useColorMode();
+  const isLigar = id === "ligar";
+  const effectiveWhatsAppColor = isLigar ? false : whatsAppColor;
   const defaultShadow = effectiveWhatsAppColor
-    ? 'shadow-wppDark/30'
-    : colorMode === 'dark'
-      ? 'shadow-black'
-      : 'shadow-primaryDark/20'
+    ? "shadow-wppDark/30"
+    : colorMode === "dark"
+      ? "shadow-black"
+      : "shadow-primaryDark/20";
 
-  const hasCustomShadow = className?.includes('shadow-')
+  const hasCustomShadow = className?.includes("shadow-");
 
-  const shadowClass = hasCustomShadow ? '' : defaultShadow
+  const shadowClass = hasCustomShadow ? "" : defaultShadow;
 
   const themes = {
-    light: 'bg-primaryDark text-corTitulosBranca border border-primaryDark/20',
-    dark: 'bg-primaryLight text-corTitulosPreto',
-    default: 'bg-secondary text-corTitulosPreto border border-primaryDark/20',
-  }
+    light: "bg-primaryDark text-corTitulosBranca border border-primaryDark/20",
+    dark: "bg-primaryLight text-corTitulosPreto",
+    default: "bg-secondary text-corTitulosPreto border border-primaryDark/20",
+  };
 
   const shineThemes = {
-    light: 'bg-white/40',
-    dark: 'bg-white/40',
-    default: 'bg-black/40',
-  }
+    light: "bg-white/40",
+    dark: "bg-white/40",
+    default: "bg-black/40",
+  };
 
   const colors = bgClass
     ? bgClass
     : effectiveWhatsAppColor
       ? whatsAppThemes[colorMode]
-      : themes[colorMode]
+      : themes[colorMode];
 
-  const shineColor = shineThemes[colorMode]
-  const spacing = padding || 'px-6 py-3'
+  const shineColor = shineThemes[colorMode];
+  const spacing = padding || "px-6 py-3";
 
-  const { showGlobalButton } = useColorMode()
+  const { showGlobalButton } = useColorMode();
 
-  if (id === 'ligar' && !showGlobalButton) {
-    return null
+  if (id === "ligar" && !showGlobalButton) {
+    return null;
   }
   return (
     <a
@@ -58,7 +58,7 @@ export default function ButtonReflexo({
       rel="noopener noreferrer"
       href={link}
       aria-label="Botão de contato"
-      onClick={onclick}
+      onClick={onClick}
       className={`
   relative
   overflow-hidden
@@ -92,5 +92,5 @@ export default function ButtonReflexo({
         {label}
       </span>
     </a>
-  )
+  );
 }

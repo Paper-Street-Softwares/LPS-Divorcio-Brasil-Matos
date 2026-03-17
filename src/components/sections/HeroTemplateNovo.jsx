@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react'
-import { Button } from '../interactives/ButtonNovoTemplate'
-import { motion } from 'framer-motion'
+import React, { useRef, useState } from "react";
+import { Button } from "../interactives/ButtonNovoTemplate";
+import { motion } from "framer-motion";
 import {
   MapPin,
   MessageCircle,
@@ -9,13 +9,13 @@ import {
   AlertTriangle,
   HeartCrack,
   Split,
-} from 'lucide-react'
-import content from '../../content/content'
-import SectionArea from '../sectionElements/SectionArea'
-import SectionWrapper from '../sectionElements/SectionWrapper'
-import ButtonReflexo from '../interactives/ButtonReflexo'
-import ButtonAlert from '../interactives/ButtonAlert'
-import { useColorMode } from '../../context/UseContextArchive'
+} from "lucide-react";
+import content from "../../content/content";
+import SectionArea from "../sectionElements/SectionArea";
+import SectionWrapper from "../sectionElements/SectionWrapper";
+import ButtonReflexo from "../interactives/ButtonReflexo";
+import ButtonAlert from "../interactives/ButtonAlert";
+import { useColorMode } from "../../context/UseContextArchive";
 
 function HeroTemplateNovo({
   colorMode,
@@ -33,45 +33,45 @@ function HeroTemplateNovo({
   obsTwo,
 }) {
   switch (colorMode) {
-    case 'light':
-      backgroundMode = 'bg-white'
-      bgFaixaHero = 'bg-terciary'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      textDestaque = 'text-primaryDark'
-      bgMinitag = 'bg-transparent border-primaryDark text-primaryDark'
+    case "light":
+      backgroundMode = "bg-white";
+      bgFaixaHero = "bg-terciary";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      textDestaque = "text-primaryDark";
+      bgMinitag = "bg-transparent border-primaryDark text-primaryDark";
       // textObs = 'text-green-500'
-      image = ' border-[8px] border-white'
-      bgAlertHero = 'bg-white'
-      borderColor = 'bg-white'
-      break
-    case 'dark':
-      backgroundMode = 'bg-dark'
-      bgFaixaHero = 'bg-white/5'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryLight'
-      bgMinitag = 'bg-transparent border-primaryLight text-primaryLight'
+      image = " border-[8px] border-white";
+      bgAlertHero = "bg-white";
+      borderColor = "bg-white";
+      break;
+    case "dark":
+      backgroundMode = "bg-dark";
+      bgFaixaHero = "bg-white/5";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryLight";
+      bgMinitag = "bg-transparent border-primaryLight text-primaryLight";
       // textObs = 'text-green-500'
-      image = ' border-[8px] border-borderImage'
-      bgAlertHero = 'bg-black text-white/60'
-      borderColor = 'border-borderImage'
+      image = " border-[8px] border-borderImage";
+      bgAlertHero = "bg-black text-white/60";
+      borderColor = "border-borderImage";
 
-      break
-    case 'default':
-      backgroundMode = 'bg-white'
-      bgFaixaHero = 'bg-terciary'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryDark'
-      bgMinitag = 'bg-transparent border-primaryDark text-primaryDark'
+      break;
+    case "default":
+      backgroundMode = "bg-white";
+      bgFaixaHero = "bg-terciary";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryDark";
+      bgMinitag = "bg-transparent border-primaryDark text-primaryDark";
       // textObs = 'text-green-500'
-      image = ' border-[8px] border-white'
-      bgAlertHero = 'bg-white'
-      borderColor = 'border-white'
+      image = " border-[8px] border-white";
+      bgAlertHero = "bg-white";
+      borderColor = "border-white";
   }
 
-  const { showGlobalButton } = useColorMode()
+  const { showGlobalButton } = useColorMode();
 
   return (
     <SectionArea
@@ -95,7 +95,7 @@ function HeroTemplateNovo({
             <div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="space-y-8 order-2 lg:order-1 flex flex-col items-start desktop1:items-start"
             >
               <div
@@ -119,6 +119,7 @@ function HeroTemplateNovo({
               </p>
               <div className="flex flex-col gap-4 pt-4 mx-auto desktop1:mx-0">
                 <ButtonReflexo
+                  onClick={() => gtag_report_conversion()}
                   icon={
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +154,7 @@ function HeroTemplateNovo({
               {obs && (
                 <div className="">
                   <div className="flex justify-start items-center gap-3 text-sm text-mutedForeground pt-6 w-full">
-                    {' '}
+                    {" "}
                     <div className="relative flex ">
                       {/* <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-600 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span> */}
@@ -187,7 +188,7 @@ function HeroTemplateNovo({
             <div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="relative order-1 lg:order-2"
             >
               <div
@@ -253,7 +254,7 @@ function HeroTemplateNovo({
         </SectionWrapper>
       </section>
     </SectionArea>
-  )
+  );
 }
 
-export default HeroTemplateNovo
+export default HeroTemplateNovo;

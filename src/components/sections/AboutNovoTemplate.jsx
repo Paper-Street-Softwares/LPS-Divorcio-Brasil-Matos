@@ -1,24 +1,24 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import SectionArea from '../sectionElements/SectionArea'
-import SectionWrapper from '../sectionElements/SectionWrapper'
-import { ArrowRight, CheckCircle2, X } from 'lucide-react'
-import { Dialog } from 'primereact/dialog'
-import content from '../../content/content'
-import ButtonReflexo from '../interactives/ButtonReflexo'
-import { Button } from '../interactives/ButtonNovoTemplate'
-import { Phone } from 'lucide-react'
-import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
-import MotionDivDownToUp from '../animation/MotionDivDownToUp'
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import SectionArea from "../sectionElements/SectionArea";
+import SectionWrapper from "../sectionElements/SectionWrapper";
+import { ArrowRight, CheckCircle2, X } from "lucide-react";
+import { Dialog } from "primereact/dialog";
+import content from "../../content/content";
+import ButtonReflexo from "../interactives/ButtonReflexo";
+import { Button } from "../interactives/ButtonNovoTemplate";
+import { Phone } from "lucide-react";
+import SectionHeaderNovo from "../sectionElements/SectionHeaderNovo";
+import MotionDivDownToUp from "../animation/MotionDivDownToUp";
 
 function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
-  const [visible, setVisible] = useState(false)
-  const [modalTitle, setModalTitle] = useState('')
+  const [visible, setVisible] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
 
   const onClick = () => {
-    setModalTitle(content.texts.about.title)
-    setVisible(true)
-  }
+    setModalTitle(content.texts.about.title);
+    setVisible(true);
+  };
 
   // Definindo classes conforme colorMode
   let backgroundMode,
@@ -28,38 +28,38 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
     iconBg,
     buttonBg,
     textDestaque,
-    image
+    image;
 
   switch (colorMode) {
-    case 'light':
-      backgroundMode = 'bg-white'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      textDestaque = 'text-primaryDark'
-      cardBg = 'bg-white/10'
-      iconBg = 'bg-primaryDark/10 text-primaryDark'
-      buttonBg = 'bg-primaryDark'
-      image = ' border-[8px] border-white'
-      break
-    case 'dark':
-      backgroundMode = 'bg-black'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryLight'
-      cardBg = 'bg-gray-800/20'
-      iconBg = 'bg-primaryLight/20 text-primaryLight'
-      buttonBg = 'bg-primaryLight'
-      image = ' border-[8px] border-borderImage'
-      break
+    case "light":
+      backgroundMode = "bg-white";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      textDestaque = "text-primaryDark";
+      cardBg = "bg-white/10";
+      iconBg = "bg-primaryDark/10 text-primaryDark";
+      buttonBg = "bg-primaryDark";
+      image = " border-[8px] border-white";
+      break;
+    case "dark":
+      backgroundMode = "bg-black";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryLight";
+      cardBg = "bg-gray-800/20";
+      iconBg = "bg-primaryLight/20 text-primaryLight";
+      buttonBg = "bg-primaryLight";
+      image = " border-[8px] border-borderImage";
+      break;
     default:
-      backgroundMode = 'bg-white'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryDark'
-      cardBg = 'bg-white/10'
-      iconBg = 'bg-primaryDark/10 text-primaryDark'
-      buttonBg = 'bg-primaryDark'
-      image = ' border-[8px] border-white'
+      backgroundMode = "bg-white";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryDark";
+      cardBg = "bg-white/10";
+      iconBg = "bg-primaryDark/10 text-primaryDark";
+      buttonBg = "bg-primaryDark";
+      image = " border-[8px] border-white";
   }
 
   return (
@@ -76,7 +76,7 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
               <MotionDivDownToUp
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 className="space-y-8"
               >
                 <div>
@@ -109,12 +109,12 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
                   <div className="space-y-4">
                     {[
                       {
-                        title: 'Atendimento Personalizado',
-                        desc: 'Cada caso de busca e apreensão é analisado de forma individual, com estratégia jurídica sob medida.',
+                        title: "Atendimento Personalizado",
+                        desc: "Cada caso de busca e apreensão é analisado de forma individual, com estratégia jurídica sob medida.",
                       },
                       {
-                        title: 'Transparência Total',
-                        desc: 'Você entende o que está acontecendo e acompanha cada etapa do processo com clareza.',
+                        title: "Transparência Total",
+                        desc: "Você entende o que está acontecendo e acompanha cada etapa do processo com clareza.",
                       },
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-start gap-4">
@@ -138,6 +138,7 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
 
                 <div className="desktop1:flex flex-col gap-4 pt-4 w-fit justify-center items-start hidden ">
                   <ButtonReflexo
+                    onClick={() => gtag_report_conversion()}
                     icon={
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +170,7 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
               <MotionDivDownToUp
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 className="relative w-full mt-10 tablet1:mt-24 desktop1:mt-0 m-auto overflow-visible mb-10 desktop1:mb-0"
               >
                 <div className="relative rounded-3xl shadow-2xl ring-1 ring-black/5">
@@ -191,6 +192,7 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
               <MotionDivDownToUp>
                 <div className="flex flex-col gap-4 w-fit justify-center mx-auto desktop1:hidden">
                   <ButtonReflexo
+                    onClick={() => gtag_report_conversion()}
                     icon={
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -231,11 +233,11 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
             }
             visible={visible}
             onHide={() => setVisible(false)}
-            style={{ width: '50vw' }}
+            style={{ width: "50vw" }}
             breakpoints={{
-              '4000px': '641px',
-              '1024px': '641px',
-              '641px': '85vw',
+              "4000px": "641px",
+              "1024px": "641px",
+              "641px": "85vw",
             }}
           >
             <div className="text-paragraph3 px-4 pb-4">
@@ -263,7 +265,7 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
         </section>
       </SectionWrapper>
     </SectionArea>
-  )
+  );
 }
 
-export default AboutNovoTemplate
+export default AboutNovoTemplate;
