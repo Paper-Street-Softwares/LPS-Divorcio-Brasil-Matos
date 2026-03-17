@@ -78,7 +78,7 @@ export const infos = {
   obs: <span className="italic">A_Definir </span>,
   instagramProfile: "brasilmatosadv", // Sem o @
   facebookProfile: "",
-  linkeDinProfile: "/brasilmatos",
+  linkeDinProfile: "brasilmatos",
   x: "",
   tiktokProfile: "",
 
@@ -118,11 +118,11 @@ const content = {
       title: (
         <h1>
           DIVÓRCIO{" "}
-          <span className="destaque relative italic font-light">
+          <span className="relative italic font-light destaque">
             ONLINE
             <span>
               <svg
-                className="hero-underline absolute bottom-2 left-0 w-full h-3 text-accent/30 hidden desktop1:flex"
+                className="absolute left-0 hidden w-full h-3 hero-underline bottom-2 text-accent/30 desktop1:flex"
                 viewBox="0 0 100 10"
                 preserveAspectRatio="none"
               >
@@ -134,7 +134,7 @@ const content = {
                 />
               </svg>
               <svg
-                className="hero-underline absolute bottom-0 left-0 w-full h-3 text-accent/30 desktop1:hidden"
+                className="absolute bottom-0 left-0 w-full h-3 hero-underline text-accent/30 desktop1:hidden"
                 viewBox="0 0 100 10"
                 preserveAspectRatio="none"
               >
@@ -218,7 +218,7 @@ const content = {
       title: (
         <h1>
           Sabemos que o momento do divórcio é
-          <span className="destaque italic font-light"> delicado</span> e,
+          <span className="italic font-light destaque"> delicado</span> e,
           muitas vezes, doloroso.
         </h1>
       ),
@@ -376,7 +376,7 @@ const content = {
       title: (
         <h1>
           Por que escolher
-          <span className="destaque italic font-light"> nosso</span> escritório?
+          <span className="italic font-light destaque"> nosso</span> escritório?
         </h1>
       ),
       SecondPartTitle: "",
@@ -384,16 +384,16 @@ const content = {
         "Nosso compromisso é tornar esse momento mais leve, rápido e seguro para você.",
       paragraph: (
         <div>
-          <span className="flex gap-2 items-center">
+          <span className="flex items-center gap-2">
             <Check /> <p>Atuação especializada em Direito de Família</p>
           </span>
-          <span className="flex gap-2 items-center">
+          <span className="flex items-center gap-2">
             <Check /> <p>Experiência em divórcios online</p>
           </span>
-          <span className="flex gap-2 items-center">
+          <span className="flex items-center gap-2">
             <Check /> <p>Atendimento ágil e personalizado</p>
           </span>
-          <span className="flex gap-2 items-center">
+          <span className="flex items-center gap-2">
             <Check /> <p>Transparência em todas as etapas</p>
           </span>
         </div>
@@ -463,7 +463,7 @@ const content = {
       title: (
         <h1>
           A_Definir
-          <span className="destaque italic font-light"> A_Definir </span>
+          <span className="italic font-light destaque"> A_Definir </span>
           A_Definir
         </h1>
       ),
@@ -509,35 +509,35 @@ const content = {
         <div className="flex flex-col gap-3">
           <div className="flex items-start gap-2 mx-auto">
             {" "}
-            <span className="border-2 rounded-full p-1">
+            <span className="p-1 border-2 rounded-full">
               <Check className="" width={17} height={17} />
             </span>{" "}
             Orientação clara sobre seus direitos no divórcio
           </div>
           <div className="flex items-start gap-2 mx-auto">
             {" "}
-            <span className="border-2 rounded-full p-1">
+            <span className="p-1 border-2 rounded-full">
               <Check className="" width={17} height={17} />
             </span>{" "}
             Atendimento humanizado e sigiloso com Advogada especializada
           </div>
           <div className="flex items-start gap-2 mx-auto">
             {" "}
-            <span className="border-2 rounded-full p-1">
+            <span className="p-1 border-2 rounded-full">
               <Check className="" width={17} height={17} />
             </span>{" "}
             Divórcio online, sem audiências e sem desgaste emocional
           </div>
           <div className="flex items-start gap-2 mx-auto">
             {" "}
-            <span className="border-2 rounded-full p-1">
+            <span className="p-1 border-2 rounded-full">
               <Check className="" width={17} height={17} />
             </span>{" "}
             Acompanhamento rápido pelo WhatsApp, do início ao fim
           </div>
           <div className="flex items-start gap-2 mx-auto">
             {" "}
-            <span className="border-2 rounded-full p-1">
+            <span className="p-1 border-2 rounded-full">
               <Check className="" width={17} height={17} />
             </span>{" "}
             Segurança para encerrar esse ciclo e seguir em frente
@@ -545,12 +545,12 @@ const content = {
         </div>
       ),
       // subtitleDireita: (
-      //   <p className="gap-3 flex font-mainFont opacity-60 mt-1">
+      //   <p className="flex gap-3 mt-1 font-mainFont opacity-60">
       //     <span>E N T R E </span> E M <span>C O N T A T O</span> V I A
       //   </p>
       // ),
       // titleDireita: (
-      //   <h1 className="text-title5 my-3 font-mainFont">WhatsApp</h1>
+      //   <h1 className="my-3 text-title5 font-mainFont">WhatsApp</h1>
       // ),
       ctaButtonText: "Quero iniciar meu divórcio online",
       ctaButtonAriaLabel:
