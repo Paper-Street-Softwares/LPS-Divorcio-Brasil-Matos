@@ -54,7 +54,8 @@ export const infos = {
   endereco: (
     <div>
       {/* <p>Endereço:</p> */}
-      <p>São Paulo - SP</p>
+      <p>Av. Paulista, nº 1471, Conj. 1110, <br />
+      </p>
     </div>
   ),
   enderecoSecundario: (
@@ -74,7 +75,7 @@ export const infos = {
   obs: <span className="italic">A_Definir </span>,
   instagramProfile: "brasilmatosadv", // Sem o @
   facebookProfile: "",
-  linkeDinProfile: "",
+  linkeDinProfile: "/brasilmatos",
   x: "",
   tiktokProfile: "",
 
