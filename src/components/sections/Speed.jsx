@@ -138,7 +138,7 @@ function Speed({ colorMode }) {
         </section>
         <div className="mt-10 ">
           <SectionHeaderNovo
-            title="Atuação cuidadosa e estratégica também nas demais demandas familiares"
+            title="Atuação cuidadosa e estratégica também nas demais demandas familiares:"
             colorMode={colorMode}
           />
           <div className="grid w-full max-w-5xl grid-cols-1 gap-6 px-4 mx-auto mt-8 font-medium font-secondFont md:grid-cols-2 lg:grid-cols-3">
