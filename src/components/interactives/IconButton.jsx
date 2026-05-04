@@ -1,5 +1,5 @@
 export default function IconButton(props) {
-  const { icon, label, ariaLabel, className } = props
+  const { icon, label, ariaLabel, className } = props;
 
   return (
     <button
@@ -7,8 +7,8 @@ export default function IconButton(props) {
       aria-label={ariaLabel}
     >
       <div className="flex items-center text-center gap-[10px]">
-        <div className="flex flex-col text-colorBlack justify-end">{icon}</div>
+        <div className="flex flex-col justify-end text-colorBlack">{icon}</div>
       </div>
     </button>
-  )
+  );
 }
