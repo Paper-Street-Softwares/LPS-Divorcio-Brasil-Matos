@@ -592,6 +592,40 @@ const content = {
           answer:
             "Sim. Mesmo sem acordo em todos os pontos, é possível dar entrada no divórcio. Cada caso é analisado com cuidado para garantir seus direitos e a melhor solução possível.",
         },
+        question5: {
+          question: "Meu ex parou de pagar a pensão. O que posso fazer agora?",
+          answer:
+            "É possível cobrar judicialmente, inclusive com medidas rápidas para garantir o pagamento, como desconto em folha ou até prisão em casos específicos.",
+        },
+        question6: {
+          question:
+            "O outro genitor não cumpre os dias de visita. Como resolver isso?",
+          answer:
+            "A regularização pode ser feita judicialmente, definindo regras claras e aplicando medidas para garantir o cumprimento.",
+        },
+        question7: {
+          question: "O pai se recusa a reconhecer meu filho. Tem solução?",
+          answer:
+            "Sim. É possível entrar com ação de investigação de paternidade, inclusive com exame de DNA, garantindo os direitos da criança.",
+        },
+        question8: {
+          question:
+            "Tenho medo de brigas na família quando eu faltar. Como evitar isso?",
+          answer:
+            " Um planejamento sucessório com testamento organiza a divisão dos bens e reduz conflitos entre herdeiros.",
+        },
+        question9: {
+          question:
+            "Um familiar faleceu e ninguém sabe por onde começar. O que fazer?",
+          answer:
+            "O inventário é o primeiro passo para regularizar os bens e permitir a partilha legal entre os herdeiros.",
+        },
+        question10: {
+          question:
+            "Um parente não consegue mais cuidar da própria vida. Como agir?",
+          answer:
+            "É possível pedir a interdição e nomear um curador para administrar os interesses dele com segurança.",
+        },
       },
       paragraph: "Clique aqui caso tenha mais dúvidas",
     },
